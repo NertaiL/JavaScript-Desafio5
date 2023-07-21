@@ -81,6 +81,10 @@ main {
   justify-content: space-between;
 }
 
+.listt{
+  background-color: rgba(8, 56, 70, 0.466);
+}
+
 #botonall {
   display: flex;
   flex-direction: row-reverse;

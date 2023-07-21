@@ -25,11 +25,10 @@ const tareaAgregada = () => {
   const nuevaTarea = {
     //si hay una ultimaTareaCreada, entonces dame el ultimo id agregado, +1 para que sea incremental y si no tengo tareas agregadas entonces comienza en 1 = ultimaTareaCreada.id +1 : 1
     id: ultimaTareaCreada ? ultimaTareaCreada.id + 1 : 1, // es un operador ternario primero la condicion ? y despues si es verdadero : false
-    tarea: nombreDeLaTarea,
+    tarea: nombreDeLaTarea, // es importante que se busque por id, de identificador del array
     completed: false,
   };
   todoListTarea.push(nuevaTarea);
-  /* agregarInput.value = ''; */
   /* console.log(todoListTarea) */ // para probar si esta funcionando bien
   renderizar();
   agregarInput.value = "";
@@ -80,7 +79,7 @@ const renderizar = () => {
     /* inputCheck = completed  */
     inputCheckear = todoListTareaM.completed
       ? //tengo que pasarle el nombre de la funcion cambiarEstado
-        `<li class="list"> 
+        `<li class="listt"> 
              <div class="box_tittle">
              <h3 class="tittle">${todoListTareaM.tarea}</h3>
              
@@ -123,7 +122,7 @@ renderizar();
 //cambiando tittle
 window.addEventListener("blur", () => {
   previousTittle = document.title;
-  document.title = "Vuelve alba, No me jodas😡";
+  document.title = "Tareas Pendiente😎";
 });
 window.addEventListener("focus", () => {
   document.title = previousTittle;
