@@ -114,8 +114,8 @@ const renderizar = () => {
     }
   });
   listaDeTarea.innerHTML = html; // en esta linea se renderiza la tarea en el html
-  total.innerHTML = todoListTarea.length; //aqui se renderiza el total de las tareas
-  realizadas.innerHTML = realizadaCount.length; // aqui se renderiza la cantidad
+  total.innerHTML = todoListTarea.length; //aqui me cuenta el total de las tareas, recorriendo el array completo
+  realizadas.innerHTML = realizadaCount.length; // aqui me cuenta el total de las tareas realizadas ,recorriendo el array completo con el .length, nos dice la longitud del array
 };
 renderizar();
 
